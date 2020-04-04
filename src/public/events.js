@@ -3,11 +3,15 @@ var wsConnection = null;
 (function () {
     wsConnection = new WebSocket('ws://localhost:9092');
 
-    wsConnection.onopen = function () {
-        console.log("Connected");
+    wsConnection.onopen = function() {
+        wsConnection.send("Front-end done!");
     };
 
-    wsConnection.onerror = function (error) {
-        console.error(error);
+    wsConnection.onmessage = function(message) {
+        console.log(message.data);
+    };
+
+    wsConnection.onclose = function() {
+        console.log("Connection lost");
     };
 })();
