@@ -9,11 +9,13 @@ var commands = {
     68: 'RIGHT',
     32: 'JUMP',
     71: 'GRANADE',
-    88: 'AIM'
+    88: 'AIM',
+    17: 'SQUAT'
 };
 
 (function() {
     document.addEventListener('keydown', function(event) {
+        console.log(event.keyCode);
         var command = commands[event.keyCode];
         var direction = command ? command : 'STAY' ;
 
