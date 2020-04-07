@@ -8,7 +8,8 @@ var commands = {
     65: 'LEFT',
     68: 'RIGHT',
     32: 'JUMP',
-    71: 'GRANADE'
+    71: 'GRANADE',
+    88: 'AIM'
 };
 
 (function() {

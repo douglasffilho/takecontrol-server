@@ -7,6 +7,6 @@
     });
 
     document.addEventListener('click', function(event) {
-        wsConnection.send('CLICK');
+        wsConnection.send('SHOT');
     });
 })();

@@ -7,9 +7,9 @@ var wsConnection = null;
         wsConnection.send("Front-end done!");
     };
 
-    /** wsConnection.onmessage = function(message) {
-        console.log(message.data);
-    }; **/
+    // wsConnection.onmessage = function(message) {
+    //     console.log(message.data);
+    // };
 
     wsConnection.onclose = function() {
         console.log("Connection lost");
