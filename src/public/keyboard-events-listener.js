@@ -1,21 +1,19 @@
 var commands = {
-    'ArrowDown': 'DOWN',
-    'ArrowUp': 'UP',
-    'ArrowLeft': 'LEFT',
-    'ArrowRight': 'RIGHT',
-    's': 'DOWN',
-    'w': 'UP',
-    'a': 'LEFT',
-    'd': 'RIGHT',
-    'S': 'DOWN',
-    'W': 'UP',
-    'A': 'LEFT',
-    'D': 'RIGHT'
+    40: 'DOWN',
+    38: 'UP',
+    37: 'LEFT',
+    39: 'RIGHT',
+    83: 'DOWN',
+    87: 'UP',
+    65: 'LEFT',
+    68: 'RIGHT',
+    32: 'JUMP',
+    71: 'GRANADE'
 };
 
 (function() {
     document.addEventListener('keydown', function(event) {
-        var command = commands[event.key];
+        var command = commands[event.keyCode];
         var direction = command ? command : 'STAY' ;
 
         wsConnection.send(direction);
