@@ -14,8 +14,7 @@ const Events = {
             });
 
             connection.on("close", () => {
-                console.log("Closed connection");
-                console.log(`Connections: ${wsServer.connections.length}`);
+                wsServer.broadcastUTF("App disconnected!");
             });
         });
     }
