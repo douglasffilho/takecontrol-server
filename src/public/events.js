@@ -8,7 +8,6 @@ var wsConnection = null;
     };
 
     wsConnection.onmessage = function (message) {
-        console.log(message.data);
         if (message.data === 'Front-end done!') {
             document.getElementById("self-connection").textContent = "Server Connected";
             document.getElementById("self-connection").style = "color: green";
